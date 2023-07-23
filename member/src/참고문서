@@ -1,0 +1,17 @@
+member프로젝트 수업순서
+기본 밑작업(pom.xml, web.xml 등)
+Views member/main.jsp -> include/member_header&menu 
+-> com.spring.member/MemberController 작업 -> DB생성
+-> 패키지 만들기(dao,domain,service) -> 각 패키지 interface,class 생성 -> VO작업 
+-> Mapper.xml작업 -> MemberDAO 작업 -> MemberService 에 DAO 작업 복붙
+-> DAOImpl class 생성(ADD로 DAO추가하기) -> MemberServiceImpl class 생성(ADD로 Service추가)
+-> DB member테이블에 '삽입'으로 아무거나 입력 -> MemberController( 17,18,23,24행 작업)
+-> root-context 가서 mepper 주석처리 풀어주기 -> Run해서 확인
+->mamber_list 복사해서 member_write 생성(목록부분은 필요없으니 삭제 후 재가공) 
+-> MemberController 에 member_write 부분 작업 -> member/insert 작업
+->MemberMapper INSEERT부분 작성 -> DAOImpl 27행 작성 -> ServiceImpl 29행 작업
+->Member Controller 45행 작성
+//*memberMapper:추가 할 경우 추가 순서=> mapper->DAOImpl->Service->ServiceImpl->Controller*
+->member_list 31행 <a href> 추가로 수정작업 -> member_view 생성(write복붙) 해서 수정작업
+->Membercontroller 에서 목록에서 이름을 클릭했을 때, 수정 된 내용 저장하는 작업 부분 작성
+->Mepper 개별조회파트 작업 -> 
